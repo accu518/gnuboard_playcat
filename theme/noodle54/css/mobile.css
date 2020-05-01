@@ -566,7 +566,7 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 #kakao svg{fill: #3C1E1E}
 /*왼쪽하단*/
 
-/*글쓰기 하단버튼*/
+/*글쓰기 하단버튼*//**/
 .q > .btn_b03.btn{width: 47px}
 .write_div .btn_cancel,.btn_submit{width:106px }
 @media(max-width:450px){
