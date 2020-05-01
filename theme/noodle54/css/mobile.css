@@ -572,5 +572,3 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 @media(max-width:450px){
 	#gnb_bar .gnb_basic{display: none}
 }
-
-.main_slider_baner{overflow: hidden}

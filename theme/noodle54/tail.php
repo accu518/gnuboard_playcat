@@ -30,11 +30,11 @@ if (G5_IS_MOBILE) {
             <a href="<?php echo get_device_change_url(); ?>">모바일버전</a>
         </div>
         <div id="ft_company" class="ft_cnt">
-        	<h2>지원자정보</h2>
-	        <p class="ft_info">
-	        	이름 : 이효민<br>
-				주소  : 경기도 안산시 단원구 선부로 166 (122-1207)<br>
-				전화번호  : 0102026815
+          <h2>지원자정보</h2>
+          <p class="ft_info">
+            이름 : 이효민<br>
+            주소  : 경기도 안산시 단원구 선부로 166 (122-1207)<br>
+            전화번호  : 0102026815
 			</p>
 	    </div>
         <?php
