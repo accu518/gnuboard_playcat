@@ -5,7 +5,7 @@
 
 
 /* 초기화 */
-html {overflow-y:scroll;height:100%;min-width:321px}
+html {overflow-y:scroll;height:100%;min-width:320px}
 body {margin:0;padding:0;font-size:0.75em;background:#fff;height:100%;font-family:'Open Sans','Noto Sans KR', dotum, sans-serif}
 html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
 h1, h2, h3, h4, h5, h6 {font-size:1em}
