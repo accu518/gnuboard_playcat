@@ -25,7 +25,7 @@ $is_show_next_prev = ($list_count > 10) ? 1 : 0;
             $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
             $img = $thumb['src'] ? $thumb['src'] : '';
             $img_content = $img ? '<img src="'.$img.'" alt="'.$thumb['alt'].'" >' : '';
-            
+
             $echo_ul = ( $i && (($i % $divisor_count) === 0) ) ? '</ul><ul class="item">'.PHP_EOL : '';
 
             echo $echo_ul;
@@ -33,11 +33,11 @@ $is_show_next_prev = ($list_count > 10) ? 1 : 0;
             <li>
                 <?php
                 //echo $list[$i]['icon_reply']." ";
-                
+
                 if( $img_content ){
                     echo "<a href=\"".$list[$i]['href']."\" class=\"lt_thumb\">".$img_content."</a> ";
                 }
-                
+
                 echo "<a href=\"".$list[$i]['href']."\" class=\"lt_tit\">";
                 if ($list[$i]['icon_secret']) echo "<i class=\"fa fa-lock\" aria-hidden=\"true\"></i> ";
                 if ($list[$i]['is_notice'])
@@ -52,12 +52,12 @@ $is_show_next_prev = ($list_count > 10) ? 1 : 0;
                 if ($list[$i]['icon_file']) echo " <i class=\"fa fa-download\" aria-hidden=\"true\"></i>" ;
                 if ($list[$i]['icon_link']) echo " <i class=\"fa fa-link\" aria-hidden=\"true\"></i>" ;
                 if ($list[$i]['icon_hot']) echo " <i class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
-                
+
                 if ($list[$i]['comment_cnt'])  echo "
                 <span class=\"lt_cmt\"><span class=\"sound_only\">댓글</span>".$list[$i]['comment_cnt']."</span>";
                 echo "</a>";
                 ?>
-               
+
                 <div class="lt_info">
                     <?php echo $list[$i]['name'] ?>
                     <span class="lt_date">

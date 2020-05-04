@@ -531,9 +531,9 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 #gnb_empty{position: absolute;width: 1px;height: 1px;overflow: hidden;text-indent: -999999px;top: 0;left: 0;visibility: hidden;opacity: 0;z-index: -1;}
 #user_btn{position: absolute;top:0;right: 0}
 /*sns*/
-#sns {display: none}
-@media(min-width:1024px){
 #sns {display: block;position:absolute;right:135px;top:-40px}
+@media(max-width:1200px){
+#sns {right: 3px;top: -120px}
 	}
 #sns li{display:inline-block;padding:0 10px}
 #sns li:hover i{color:#FF8000}
@@ -543,7 +543,7 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 	#main_slider .swiper-slide img{height: 100%}
 }
 #main_slider,#stap_slider{padding: 0}
-#stap_slider .swiper-container{height: 300px}
+#stap_slider .swiper-container{height: 294px}
 /*serch*/
 @media(max-width:450px){
 	#gnb_bar #user_menu{width: 280px}
@@ -572,5 +572,10 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 @media(max-width:450px){
 	#gnb_bar .gnb_basic{display: none}
 }
-.gnb_bar.B{position: fixed;width: 100%;z-index: 999;}
-.hd_top_nav.B{display: none;}
+/*네비게이션 스크롤*/
+#gnb_bar.scrolldown{position: fixed;width: 100%;z-index: 999;top: 0;background: #fffcf6}
+.hd_top_nav.scrolldown{display: none;}
+#gnb_bar.scrolldown button{background: #fffcf6}
+
+.secondbox #basic2 .lt_title{padding: 5px 15px 0}
+.secondbox #basic2 .lt_more{top: 7px}

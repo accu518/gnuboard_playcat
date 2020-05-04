@@ -25,7 +25,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     	<h2>최상단 고정 카테고리</h2>
 
     	<!-- 상단 기본 고정 메뉴 -->
-        <ul class="hd_top_nav scrolldown">
+        <ul class="hd_top_nav scrollbar">
             <?php if ($is_member) { ?>
             <?php if ($is_admin) { ?>
             <li><a href="<?php echo G5_ADMIN_URL ?>" id="snb_adm">관리자</a></li>
@@ -46,7 +46,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         </div>
 
         <!-- 메뉴바 -->
-		<div id="gnb_bar scrolldown">
+		<div id="gnb_bar" class="scrollbar">
 			<div class="gnb_bar_inner">
 			<ul class="gnb_basic">
             <?php
@@ -213,12 +213,12 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
      var lastScroll = 0;
      $(window).scroll(function(event){
           var scroll = $(this).scrollTop();
-          if (scroll > 100){
+          if (scroll > 130){
           //이벤트를 적용시킬 스크롤 높이
-               $(".scrolldown").addClass("B");
+               $(".scrollbar").addClass("scrolldown");
           }
           else {
-               $(".scrolldown").removeClass("B");
+               $(".scrollbar").removeClass("scrolldown");
           }
           lastScroll = scroll;
      });

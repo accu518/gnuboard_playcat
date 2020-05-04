@@ -25,7 +25,7 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
             </div>
             <!-- 매장안내 -->
 
-            <div id="contact" class="contact">
+            <div id="contact" class="contact secondbox">
                   <?php
                 // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
                 // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
@@ -36,12 +36,12 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
                     'content_length' => 0   // 간단내용 길이
                 );
                 echo latest('theme/basic', 'hugi', 9, 25, 1, $options);
-                ?> 
-            </div> 
+                ?>
+            </div>
 
-	
+
         </div>
-        
+
         <!-- 상품 -->
         <div class="col50">
             <div class="item item1">
@@ -54,23 +54,23 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
                     'thumb_height'   => 300,  // 썸네일 height
                     'content_length' => 0   // 간단내용 길이
                 );
-                echo latest('theme/basic', 'item', 9, 25, 1, $options);
-                ?> 
+                echo latest('theme/basic2', 'item', 9, 25, 1, $options);
+                ?>
 			</div>
         </div>
     </div>
-    
+
 	<div class="idx_cnt">
 		<!-- 이벤트 -->
         <div class="col100">
 			<?php
 				echo latest('/slider_baner2', 'gallery', 4, 23);
     		?>
-          
+
         </div>
         <!-- 최신글 -->
         <div class="col100">
-            <div class="food food1 col50">
+            <div class="food food1 col50 secondbox">
                 <?php
                 // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
                 // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
@@ -81,26 +81,26 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
                     'content_length' => 0   // 간단내용 길이
                 );
                 echo latest('theme/basic', 'after', 9, 25, 1, $options);
-                ?> 
+                ?>
 			</div>
           	<div class="food food2 col50">
-<div id="map" style="width:100%;height:308px;"></div>
+<div id="map" style="width:100%;height:314px;"></div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=803924b54c5d0d95535021e2af63b0ec"></script>
 <!--https://developers.kakao.com/에서 REST API 키: ***************49dc 발급받아서 입력-->
 
 <!--참고페이지: http://apis.map.daum.net/web/sample/addr2coord/-->
 <script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    mapOption = {
         center: new daum.maps.LatLng(37.562577, 127.075910), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
 
 var map = new daum.maps.Map(mapContainer, mapOption);
 
-// 마커가 표시될 위치입니다 
-var markerPosition  = new daum.maps.LatLng(37.562577, 127.075910); 
+// 마커가 표시될 위치입니다
+var markerPosition  = new daum.maps.LatLng(37.562577, 127.075910);
 
 // 마커를 생성합니다
 var marker = new daum.maps.Marker({
@@ -115,12 +115,12 @@ var iwContent = '<div style="padding:5px;">플래이캣<br><a href="http://map.d
 
 // 인포윈도우를 생성합니다
 var infowindow = new daum.maps.InfoWindow({
-    position : iwPosition, 
-    content : iwContent 
+    position : iwPosition,
+    content : iwContent
 });
-  
+
 // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-infowindow.open(map, marker); 
+infowindow.open(map, marker);
 </script>
 			</div>
         </div>
