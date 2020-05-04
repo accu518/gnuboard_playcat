@@ -20,12 +20,12 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     if(defined('_INDEX_')) { // index에서만 실행
         include G5_MOBILE_PATH.'/newwin.inc.php'; // 팝업레이어
     } ?>
-	
+
 	<nav id="hd_top">
     	<h2>최상단 고정 카테고리</h2>
-    	
+
     	<!-- 상단 기본 고정 메뉴 -->
-        <ul class="hd_top_nav">
+        <ul class="hd_top_nav scrolldown">
             <?php if ($is_member) { ?>
             <?php if ($is_admin) { ?>
             <li><a href="<?php echo G5_ADMIN_URL ?>" id="snb_adm">관리자</a></li>
@@ -37,16 +37,16 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
             <li><a href="<?php echo G5_BBS_URL ?>/login.php" id="snb_login">로그인</a></li>
             <?php } ?>
         </ul>
-        
+
         <!-- 로고 -->
-		
+
         <div id="logo">
             <a class="logo1" href="<?php echo G5_URL ?>"><img src="<?php echo G5_IMG_URL ?>/logo_kr.svg" alt="<?php echo $config['cf_title']; ?>"></a>
 			<a class="logo2" href="<?php echo G5_URL ?>"><img src="<?php echo G5_IMG_URL ?>/logo.svg" alt="<?php echo $config['cf_title']; ?>"></a>
         </div>
-		
+
         <!-- 메뉴바 -->
-		<div id="gnb_bar">
+		<div id="gnb_bar scrolldown">
 			<div class="gnb_bar_inner">
 			<ul class="gnb_basic">
             <?php
@@ -91,7 +91,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 	                    <?php
 						$k++;
 	                    }	//end foreach $row2
-	
+
 	                    if($k > 0)
 	                        echo '</ul>'.PHP_EOL;
 	                    ?>
@@ -99,7 +99,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 	            <?php
 				$i++;
 	            }	//end foreach $row
-	
+
 	            if ($i == 0) {  ?>
 	                <li id="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <br><a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하세요.<?php } ?></li>
 	            <?php } ?>
@@ -111,7 +111,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 	                <button id="size_up" onclick="font_resize('container', 'ts_up ts_up2', 'ts_up2', this);"><img src="<?php echo G5_URL; ?>/img/ts03.png" width="20" alt="더크게"></button>
 	            </div>
 			</div>
-			
+
 			<button type="button" id="user_btn" class="sch_toggle"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색창</span></button>
 			<?php echo poll('theme/basic'); // 설문조사 ?>
 			<div class="sch_div" id="user_menu">
@@ -133,28 +133,28 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 	                        f.stx.focus();
 	                        return false;
 	                    }
-	
+
 	                    // 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
 	                    var cnt = 0;
 	                    for (var i=0; i<f.stx.value.length; i++) {
 	                        if (f.stx.value.charAt(i) == ' ')
 	                            cnt++;
 	                    }
-	
+
 	                    if (cnt > 1) {
 	                        alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
 	                        f.stx.select();
 	                        f.stx.focus();
 	                        return false;
 	                    }
-	
+
 	                    return true;
 	                }
 	                </script>
 	            </div>
 	            <?php echo popular('theme/basic'); // 인기검색어 ?>
 			</div>
-		        
+
 	        <script>
 	        $(function () {
 	            //폰트 크기 조정 위치 지정
@@ -166,11 +166,11 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 	                $("#text_size button").removeClass("select");
 	                $("#size_up").addClass("select");
 	            }
-	
+
 	            $(".hd_opener").on("click", function() {
 	                var $this = $(this);
 	                var $hd_layer = $this.next(".hd_div");
-	
+
 	                if($hd_layer.is(":visible")) {
 	                    $hd_layer.hide();
 	                    $this.find("span").text("열기");
@@ -178,22 +178,22 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 	                    var $hd_layer2 = $(".hd_div:visible");
 	                    $hd_layer2.prev(".hd_opener").find("span").text("열기");
 	                    $hd_layer2.hide();
-	
+
 	                    $hd_layer.show();
 	                    $this.find("span").text("닫기");
 	                }
 	            });
-	
+
 	            $("#container").on("click", function() {
 	                $(".hd_div").hide();
-	
+
 	            });
-	
+
 	            $(".btn_gnb_op").click(function(){
 	                $(this).toggleClass("btn_gnb_cl").next(".gnb_2dul").slideToggle(300);
-	                
+
 	            });
-	
+
 	            $(".hd_closer").on("click", function() {
 	                var idx = $(".hd_closer").index($(this));
 	                $(".hd_div:visible").hide();
@@ -208,6 +208,22 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 			    });
 	        });
 	        </script>
+          <script>
+          $(function(){
+     var lastScroll = 0;
+     $(window).scroll(function(event){
+          var scroll = $(this).scrollTop();
+          if (scroll > 100){
+          //이벤트를 적용시킬 스크롤 높이
+               $(".scrolldown").addClass("B");
+          }
+          else {
+               $(".scrolldown").removeClass("B");
+          }
+          lastScroll = scroll;
+     });
+});
+</script>
 			<!--sns-->
 		<ul id="sns">
 			<li><a href="https://www.youtube.com/channel/UCuxRQY8gs3OiQPA2qI83_7w"><i class="fab fa-youtube fa-3x"></i></a></li>
@@ -215,13 +231,13 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 			<li><a href="https://www.facebook.com/playcat.kr"><i class="fab fa-facebook-square fa-3x"></i></a></li>
 		</ul>
 	        </div>
-		
+
 		</div>
     </nav>
 </header>
 
 <div id="wrapper">
-   
+
     	<?php if (!defined("_INDEX_")) { ?>
 		<div id="container">
     	<h2 id="container_title" class="top" title="<?php echo get_text($g5['title']); ?>">

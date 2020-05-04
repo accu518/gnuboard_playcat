@@ -572,3 +572,5 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 @media(max-width:450px){
 	#gnb_bar .gnb_basic{display: none}
 }
+.gnb_bar.B{position: fixed;width: 100%;z-index: 999;}
+.hd_top_nav.B{display: none;}
