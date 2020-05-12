@@ -11,9 +11,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 
 $thumb_width = 80;
 $thumb_height = 50;
 $list_count = count($list);
-$divisor_count = 8;
+$divisor_count = 7;
 $start_page_num = $list_count ? '1' : '0';
-$is_show_next_prev = ($list_count > 10) ? 1 : 0;
+$is_show_next_prev = ($list_count > 8) ? 1 : 0;
 ?>
 
 <div class="lt owl-carousel-wrap">
