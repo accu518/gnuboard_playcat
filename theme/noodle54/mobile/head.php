@@ -26,6 +26,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
     <!-- 상단 기본 고정 메뉴 -->
     <ul class="hd_top_nav scrollbar">
+      <div id="container">
       <?php if ($is_member) { ?>
         <?php if ($is_admin) { ?>
           <li><a href="<?php echo G5_ADMIN_URL ?>" id="snb_adm">관리자</a></li>
@@ -36,6 +37,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <li><a href="<?php echo G5_BBS_URL ?>/register.php" id="snb_join">회원가입</a></li>
         <li><a href="<?php echo G5_BBS_URL ?>/login.php" id="snb_login">로그인</a></li>
       <?php } ?>
+      </div>
     </ul>
 
     <!-- 로고 -->
