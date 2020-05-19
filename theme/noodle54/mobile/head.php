@@ -63,8 +63,13 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
       <div id="box16" class="box"></div>
       <div id="box17" class="box"></div>
       <div id="box18" class="box"></div>
-
     </div>
+    <!--sns-->
+    <ul id="sns">
+      <li><a href="https://www.youtube.com/channel/UCuxRQY8gs3OiQPA2qI83_7w"><i class="fab fa-youtube fa-3x"></i></a></li>
+      <li><a href="https://www.instagram.com/playcat.kr/"><i class="fab fa-instagram-square fa-3x"></i></a></li>
+      <li><a href="https://www.facebook.com/playcat.kr"><i class="fab fa-facebook-square fa-3x"></i></a></li>
+    </ul>
 
     <!-- 메뉴바 -->
     <div id="gnb_bar" class="scrollbar">
@@ -245,12 +250,6 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
           });
         });
       </script>
-      <!--sns-->
-      <ul id="sns">
-        <li><a href="https://www.youtube.com/channel/UCuxRQY8gs3OiQPA2qI83_7w"><i class="fab fa-youtube fa-3x"></i></a></li>
-        <li><a href="https://www.instagram.com/playcat.kr/"><i class="fab fa-instagram-square fa-3x"></i></a></li>
-        <li><a href="https://www.facebook.com/playcat.kr"><i class="fab fa-facebook-square fa-3x"></i></a></li>
-      </ul>
     </div>
 
   </div>

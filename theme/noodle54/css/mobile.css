@@ -261,7 +261,7 @@ box-shadow:0 0 5px rgba(100,100,100,0.2)}
 .company a:hover {color:#775b31;display:inline-block}
 .company img {margin-bottom:20px}
 
-.contact {width:100%;height:308px;overflow:hidden}
+.contact {width:100%;height:304px;overflow:hidden}
 
 @media (max-width:640px) {
 }
@@ -530,9 +530,9 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 #gnb_empty{position: absolute;width: 1px;height: 1px;overflow: hidden;text-indent: -999999px;top: 0;left: 0;visibility: hidden;opacity: 0;z-index: -1;}
 #user_btn{position: absolute;top:0;right: 0}
 /*sns*/
-#sns {display: block;position:absolute;right:135px;top:-40px}
+#sns {display: block;position:absolute;right:300px;top:84px}
 @media(max-width:1200px){
-#sns {right: 3px;top: -120px}
+#sns {left: -5px;top: 4px;width: 800px}
 	}
 #sns li{display:inline-block;padding:0 10px}
 #sns li:hover i{color:#FF8000}
@@ -541,7 +541,7 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 	#main_slider .swiper-container{height: 250px}
 }
 #main_slider,#stap_slider{padding: 0}
-#stap_slider .swiper-container{height: 294px}
+#stap_slider .swiper-container{height: 304px}
 /*serch*/
 @media(max-width:450px){
 	#gnb_bar #user_menu{width: 280px}
@@ -552,13 +552,7 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 	#side_hd{width:  317px}
 }
 		#main_slider .swiper-slide img,#stap_slider .swiper-slide img{height: 100%}
-/*배경*/
-/*
-.lt.owl-carousel-wrap::before{content: "";display: block;background-image: url(/lhm/img/Cat.jpg);position: absolute;bottom: -22px;right: 38px;width: 100px;height: 120px;
-	z-index: 99}
-.notice > .notice::before{content: "";display: block;background-image: url(/lhm/img/Cat.jpg);position: absolute;bottom: -22px;right: 38px;width: 100px;height: 120px;
-	z-index: 99}
-*/
+
 /*카톡*/
 #kakao{position: fixed;right: 15px;width:50px;height: 50px;bottom: 15px;z-index: 999}
 #kakao svg{fill: #3C1E1E}
@@ -620,14 +614,20 @@ box-shadow:2px 2px 3px 0px rgba(0,0,0,0.2)}
 /*최근게시판 크기*/
 .owl-stage-outer.owl-height{height: auto}
 /*검색창*/
-@media(min-width:1024px){
+
   #user_menu{position: absolute; background: white; box-shadow: none;}
   #hd_sch form{padding: 3px 20px}
   #user_close{right: 340px;top: 9px}
   #popular{display: none;}
   #hd_sch #sch_submit{top:2px}
-}
+
 /*메뉴창*/
 @media(min-width:1024px){
   #gnb_open{display: none}
 }
+.hd_top_nav.scrollbar{text-align: right;}
+
+.swiper-button-next, .swiper-button-prev{display: none;}
+.col50.itemBox{height: 608px;background: #fffcf6}
+.col100 .lt,.col50 .lt{height: 304px;background:#fffcf6 }
+.col50 .notice{height: 304px}

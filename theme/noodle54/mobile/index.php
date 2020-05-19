@@ -43,7 +43,7 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
         </div>
 
         <!-- 상품 -->
-        <div class="col50">
+        <div class="col50 itemBox">
             <div class="item item1">
                 <?php
                 // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
@@ -84,7 +84,7 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
                 ?>
 			</div>
           	<div class="food food2 col50">
-<div id="map" style="width:100%;height:314px;"></div>
+<div id="map" style="width:100%;height:304px;"></div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=803924b54c5d0d95535021e2af63b0ec"></script>
 <!--https://developers.kakao.com/에서 REST API 키: ***************49dc 발급받아서 입력-->
